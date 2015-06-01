@@ -75,7 +75,7 @@ function _extend(destination, source) {
 
 // Find all elements
 function _getElements(selector) {
-    return player.container.querySelectorAll(selector);
+    return document.querySelectorAll(selector);
 }
 
 // Find a single element
