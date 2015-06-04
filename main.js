@@ -82,3 +82,18 @@ function _getElements(selector) {
 function _getElement(selector) {
     return _getElements(selector)[0];
 }
+
+Array.prototype.mappy = function( callback ) {
+    var i = 0,
+        leng = this.length,
+        value;
+    
+    for ( i; i < leng; i = i + 1 ) {
+        value = this[i];
+        callback( value, i );
+    } 
+};
+// Usage
+// array.mappy( function( val, i ) {
+//     console.log( val );
+// });
